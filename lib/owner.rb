@@ -59,12 +59,10 @@ class Owner
   def sell_pets
     binding.pry
     pets = cats + dogs
-    pets.each do |type, x|
-      x.map do |pet|
-        pet.mood = "nervous"
+    pets.each do |pet|
+      pet.mood = "nervous"
     end 
   end 
-end 
   
   def list_pets
     "I have #{dogs.count} dog(s), and #{cats.count} cat(s)."
