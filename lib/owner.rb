@@ -1,7 +1,7 @@
 require "pry"
 
 class Owner
-  attr_accessor :pets
+  
   attr_reader :name, :species
   
   @@owners = []
@@ -10,7 +10,6 @@ class Owner
     @name = name
     @species = species 
     @@owners << self 
-    @pets = {:dogs => [], :cats => []}
   end 
   
   def say_species
@@ -59,6 +58,7 @@ class Owner
   
   def sell_pets
     binding.pry
+    pets = cats + dogs
     pets.each do |type, x|
       x.map do |pet|
         pet.mood = "nervous"
