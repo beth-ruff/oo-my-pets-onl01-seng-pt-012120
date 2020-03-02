@@ -58,6 +58,7 @@ class Owner
   end 
   
   def sell_pets
+    binding.pry
     pets.each do |type, x|
       x.map do |pet|
         pet.mood = "nervous"
