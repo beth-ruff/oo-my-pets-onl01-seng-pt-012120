@@ -58,14 +58,10 @@ class Owner
   end 
   
   def sell_pets
-    pets.each do |type, x|
-      x.map do |pet|
-        pets.mood = "nervous"
-    
-    end 
+  
     binding.pry
   end 
-end 
+
   
   def list_pets
     "I have #{dogs.count} dog(s), and #{cats.count} cat(s)."
